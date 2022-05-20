@@ -1,0 +1,13 @@
+@app.route('/form_b')
+def form_b():
+
+    form=m()
+    if form.validate_on_submit():
+        
+        music_genre=form.music_genre.data
+        spotify=form.spotify.data
+ 
+        string='{}\n{}\n'.format(genre, spotify)
+        save_data(string_2)
+
+        return redirect( url_for('form_result'))
